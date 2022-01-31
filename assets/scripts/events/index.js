@@ -1,7 +1,11 @@
-import save from "./save.js";
+import saveButton from "./saveButton.js";
+import editButton from "./editButton.js";
+import updateButton from "./updateButton.js";
 
 const executeAllEventListener = () => {
-  save();
+  saveButton();
+  editButton();
+  updateButton();
 };
 
 export default executeAllEventListener;

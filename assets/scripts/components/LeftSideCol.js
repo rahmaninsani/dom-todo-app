@@ -8,6 +8,7 @@ const LeftSideCol = () => {
   const contentCol = new DivElement();
   const label = new LabelElement();
   const input = new InputElement();
+  const hiddenInput = new InputElement();
   const saveButton = new ButtonElement();
   const cancelButton = new ButtonElement();
   const updateButton = new ButtonElement();
@@ -30,6 +31,8 @@ const LeftSideCol = () => {
   input.addAttribute({ type: "text", id: "newTodo" });
   input.addClass(["form-control"]);
 
+  hiddenInput.addAttribute({ type: "hidden", id: "taskId" });
+
   saveButton.addAttribute({ type: "submit", id: "save" });
   saveButton.addClass(["btn", "btn-primary"]);
   saveButton.addTextContent("Save");
@@ -42,7 +45,7 @@ const LeftSideCol = () => {
   updateButton.addClass(["btn", "btn-success"]);
   updateButton.addTextContent("Update");
 
-  cardBody.addChild([label, input]);
+  cardBody.addChild([label, input, hiddenInput]);
   cardFooterSave.addChild([saveButton]);
   cardFooterUpdateCancel.addChild([cancelButton, updateButton]);
   cardContainer.addChild([cardBody, cardFooterSave, cardFooterUpdateCancel]);

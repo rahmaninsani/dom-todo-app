@@ -25,8 +25,8 @@ const RightSideCol = () => {
   ul.addClass(["list-group", "list-group-flush"]);
 
   if (todoListModel.length > 1) {
-    todoListModel.forEach(({ task }) => {
-      const list = List(task);
+    todoListModel.forEach((todo) => {
+      const list = List(todo);
       ul.addChild([list]);
     });
   }
