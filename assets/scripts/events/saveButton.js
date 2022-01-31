@@ -2,6 +2,7 @@ import List from "../components/List.js";
 import todoListModel from "../models/todo-list-model.js";
 
 import editButton from "./editButton.js";
+import deleteButton from "./deleteButton.js";
 
 const saveButton = () => {
   const saveButton = document.getElementById("save");
@@ -18,6 +19,7 @@ const saveButton = () => {
     todoList.appendChild(newTodoList.element);
     document.getElementById("newTodo").value = "";
     editButton();
+    deleteButton();
   });
 };
 export default saveButton;
