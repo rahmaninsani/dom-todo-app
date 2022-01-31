@@ -16,9 +16,6 @@ const RightSideCol = () => {
   const cardBody = CardBody();
 
   rightSideCol.addClass(["col-12", "col-md-6", "right-side"]);
-  if (todoListModel.length < 1) {
-    return rightSideCol;
-  }
 
   contentRow.addClass(["row", "justify-content-center", "align-items-center", "vh-100"]);
   contentCol.addClass(["col-10", "h-75", "d-flex", "align-items-center"]);
@@ -27,14 +24,14 @@ const RightSideCol = () => {
 
   ul.addClass(["list-group", "list-group-flush"]);
 
-  todoListModel.forEach(({ task }) => {
-    const list = List(task);
-
-    ul.addChild([list]);
-  });
+  if (todoListModel.length > 1) {
+    todoListModel.forEach(({ task }) => {
+      const list = List(task);
+      ul.addChild([list]);
+    });
+  }
 
   cardBody.addChild([ul]);
-
   cardContainer.addChild([cardBody]);
   contentCol.addChild([cardContainer]);
   contentRow.addChild([contentCol]);

@@ -15,8 +15,6 @@ const List = (task) => {
   list.addClass(["list-group-item"]);
   row.addClass(["row"]);
 
-  // <input class="form-check-input" type="checkbox" value="" />
-
   firstCol.addClass(["col-6", "col-md-1", "d-flex", "align-items-center"]);
   checkbox.addAttribute({ type: "checkbox" });
   checkbox.addClass(["form-check-input"]);
