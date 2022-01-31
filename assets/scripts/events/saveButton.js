@@ -3,6 +3,7 @@ import todoListModel from "../models/todo-list-model.js";
 
 import editButton from "./editButton.js";
 import deleteButton from "./deleteButton.js";
+import taskCheckbox from "./taskCheckbox.js";
 
 const saveButton = () => {
   const saveButton = document.getElementById("save");
@@ -20,6 +21,7 @@ const saveButton = () => {
     document.getElementById("newTodo").value = "";
     editButton();
     deleteButton();
+    taskCheckbox();
   });
 };
 export default saveButton;
